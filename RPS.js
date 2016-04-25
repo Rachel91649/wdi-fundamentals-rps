@@ -45,26 +45,26 @@ function getWinner(playerMove,computerMove) {
     }
     else if (playerMove === "rock") {
         if (computerMove === "paper") {
-            winner = "paper wins!";
+            winner = "computer wins!";
             }
             else {
-                winner = "rock wins!";
+                winner = "player wins!";
                 }
     }
     else if (playerMove === "paper") {
         if (computerMove === "scissors") {
-            winner = "scissors wins!";
+            winner = "computer wins!";
             }
             else {
-                winner = "paper wins!";
+                winner = "player wins!";
                 }
     }
     else if (playerMove === "scissors") {
         if (computerMove === "rock") {
-            winner = "rock wins!";
+            winner = "computer wins!";
             }
             else {
-                winner = "scissors wins!";
+                winner = "player wins!";
                 }
     }
     return winner;
