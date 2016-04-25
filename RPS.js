@@ -4,7 +4,7 @@
 'use strict';
 
 function getInput() {
-    console.log("Please choose either 'rock', 'paper', or 'scissors'.")
+    console.log("Please choose either 'rock', 'paper', or 'scissors'.");
     return prompt();
 }
 function randomPlay() {
@@ -41,32 +41,32 @@ function getWinner(playerMove,computerMove) {
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
     if (playerMove === computerMove) {
-    	winner = "Tie!";
+        winner = "Tie!";
     }
     else if (playerMove === "rock") {
-    	if (computerMove === "paper") {
-    		winner = " Computer Wins!";
-    		}
-    		else {
-    			winner = "Player Wins!";
-    			}
+        if (computerMove === "paper") {
+            winner = "paper wins!";
+            }
+            else {
+                winner = "rock wins!";
+                }
     }
-  	else if (playerMove === "paper") {
-    	if (computerMove === "scissors") {
-    		winner = "Computer Wins!";
-    		}
-    		else {
-    			winner = "Player Wins!";
-    			}
-  	}
+    else if (playerMove === "paper") {
+        if (computerMove === "scissors") {
+            winner = "scissors wins!";
+            }
+            else {
+                winner = "paper wins!";
+                }
+    }
     else if (playerMove === "scissors") {
-    	if (computerMove === "rock") {
-    		winner = "Computer Wins!";
-    		}
-    		else {
-    			winner = "Player Wins!";
-    			}
-   	}
+        if (computerMove === "rock") {
+            winner = "rock wins!";
+            }
+            else {
+                winner = "scissors wins!";
+                }
+    }
     return winner;
 }
 
@@ -81,11 +81,8 @@ function playToFive() {
         var playerMove = getPlayerMove();
         var computerMove = getComputerMove();
         console.log("Player chooses" + playerMove + ", and Computer chooses" + computerMove + ".");
-            getWinner(playerMove,computerMove);
-        if (getWinner(playerMove,computerMove) === 'player') { 
-        } else if (getWinner(playerMove,computerMove) === 'computer') {    
-        }    
+        getWinner(playerMove,computerMove);
     }
     return [playerWins, computerWins];
 }
-playToFive()
+playToFive();
